@@ -1,0 +1,80 @@
+<!-- div.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일</title>
+
+    <style type="text/css">
+        #box1{
+            width:500px;
+            height:100px;
+            border:2px solid red;
+            background: aquamarine;
+        }
+        #box2{
+            width:50px;
+            height: 50px;
+            background-color: pink;
+ 
+        }
+        /* body{
+            padding-left:40px;
+        } */
+        #box3{
+            width:800px;    /* 800 + 테두리 굵기 + 콘텐츠(파랑색 영역) */
+            box-sizing: border-box; /* 해당 태그의 넓이 = 패딩+테두리 + 콘텐츠(파랑색 영역) */
+            margin-top:40px;
+            padding-left:40px;
+        }
+
+        #content{
+            width:700px;
+            background: skyblue;
+            padding:40px;
+
+        }
+        #item1{
+            background:orange;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        #item2{
+            height: 100px;
+            background: seagreen;
+        }
+        /* #span1, #span2{
+            display: inline-block;
+        }
+        #span2{ width:100px; text-align: right;}
+        #span1{ width:80px;}
+
+        #box4{ width:100px; position:relative;}
+
+        /* #box4{
+            padding-left:40px;
+        } */
+        /* #span1{
+            margin-left:40px;
+        } */
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box3">
+        <div id="box2"></div>
+    </div>
+
+    <div id="content">
+        <div id="item1"></div>
+        <div id="item2"></div>
+    </div>
+<!-- 
+    <div id="box4">
+       <span id="span1">span1</span>
+        <span id="span2">span2</span>
+    </div> -->
+</body>
+</html>

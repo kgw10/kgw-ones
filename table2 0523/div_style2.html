@@ -1,0 +1,66 @@
+<!-- div.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #bigbox{
+            margin: 0 auto;
+            width:700px;
+            box-sizing: border-box;
+            background: blue;
+            padding: 30px 70px 30px 30px;
+            margin-bottom:20px;
+        }
+        #sand{
+            margin:0 auto;
+            width:700px;
+            background-color: blanchedalmond;
+            height: 70px;
+        }
+
+        #redbox{
+            height: 50px;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+
+        #greenbox{
+            height: 50px;
+            background-color: green;
+            margin-bottom: 20px;
+        }
+
+        #yellowbox, #graybox{ display:inline-block;}
+        #yellowbox{
+            width:150px;
+            background-color: yellow;
+            height: 50px;
+        }
+        #graybox{
+            background-color: gray;
+            height:50px;
+            margin-left: 30px;
+            width: calc( 700px - 30px - 70px - 30px - 150px);
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <div id="bigbox">
+        <div id="redbox"></div>
+        <div id="greenbox"></div>
+        <div id="box">
+            <span id="yellowbox"></span><span id="graybox"></span>
+        </div>
+    </div>
+    <div id="sand"></div>
+</body>
+</html>
