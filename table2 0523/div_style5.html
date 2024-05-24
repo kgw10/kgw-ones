@@ -1,0 +1,77 @@
+<!-- div_style5.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #bigbox{
+            width: 800px;
+            background: blue;
+            height: 450px;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        #orangebox, #greenbox, #graybox{ display:inline-block;}
+        #orangebox{
+            width: 200px;
+            background-color: orange;
+            height: 300px;
+            margin-left: 30px;
+            margin-right: 40px;
+        }
+        #greenbox{
+            width: 200px;
+            background-color: green;
+            height: 300px;
+            margin-right: 40px;
+        }
+        #graybox{
+            background-color: gray;
+            height:300px;
+            width: 200px;
+            margin-right: 20px;
+        }
+        #orangebox2{
+            background-color: orange;
+            width: 650px;
+            height: 50px;
+            margin-left: 30px;
+            margin-top: 30px;
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        #orangeredbox, #bluebox{ display:inline-block;}
+        #orangeredbox{
+            background-color: orangered;
+            width: 100px;
+            height: 40px;
+            margin-top: 10px;
+
+        }
+        #bluebox{
+            background-color: blue;
+            width: 100px;
+            height: 40px;
+            margin-left: 30px;
+            margin-top: 10ox;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="bigbox">
+        <span id="orangebox"></span><span id="greenbox"></span><span id="graybox"></span>
+        <div id="orangebox2">
+            <span id="orangeredbox"></span><span id="bluebox"></span>
+        </div>
+    </div>
+    
+</body>
+</html>
