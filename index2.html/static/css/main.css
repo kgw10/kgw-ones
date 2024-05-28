@@ -1,0 +1,96 @@
+/* main.css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+
+#bigsite{
+    width:1200px;
+    height: 1200px;
+    margin:0 auto;
+    position:relative;
+}
+#header{
+    width: 100%;
+    margin-bottom: 20px; /*  main 태그와의 간격 */
+    position:relative;
+}
+#top{
+    text-align: left;
+    position: relative;
+    margin-top: 100px;
+    
+}
+
+.menu{
+    width: 100px;
+    position: relative;
+    right: 100px;
+    background-color: aqua;
+
+}
+
+
+#sals .sal1_top{
+    /* background:url(../image/slide.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;     */
+
+    background: url(../image/sal1.jpeg) no-repeat center;
+    background-size: cover;
+    width: 1000px;
+    height: 300px;
+    position: relative;
+    bottom: 200px;
+}
+
+#text .text_box{
+    position: relative;
+    bottom: 1250px;
+    font-size: 20px;
+}
+
+#box .box1{
+    background: blue center;
+    position: relative;
+    width: 100%;
+    bottom: 1250px;
+}
+
+.sal2_bottom{
+    background: url(../image/sal2.jpeg) no-repeat center;
+    background-size: cover;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    margin-top: 350px; 
+    bottom: 400px;
+    left: 30px;
+}
+
+.sal3_bottom{
+    background: url(../image/sal3.jpeg) no-repeat center;
+    background:cover;
+    width: 300px;
+    height: 250px;
+    margin-top: 10px;
+    position: relative;
+    left: 350px;
+    bottom: 660px
+
+}
+.sal4_bottom{
+    background: url(../image/sal4.jpeg) no-repeat center;
+    background:cover;
+    width: 300px;
+    height: 250px;
+    margin-top: 10px;
+    position: relative;
+    left: 670px;
+    bottom: 920px;
+
+}
