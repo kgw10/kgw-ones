@@ -1,0 +1,123 @@
+<!-- flex_test.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+</head>
+<body>
+    <style>
+        #cont1{
+            width: 100%;
+            margin: 0 auto;
+            max-width: 1200px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            /* gap: 10px; */
+        }
+        #cont1>img{
+            width: 25%;
+            padding-right: 10px;
+            box-sizing: border-box;
+            /* width: calc( (1200px - 30px) / 4 );*/
+        }
+    </style>
+    
+    <h2> 여러줄 배치하기 </h2>
+    <div id="cont1">
+        <img src="https://loremflickr.com/300/400?random=1">
+        <img src="https://loremflickr.com/300/400?korea?random=2">
+        <img src="https://loremflickr.com/300/400?tiger?random=3">
+        <img src="https://loremflickr.com/300/400?random=4">
+        <img src="https://loremflickr.com/300/400?random=5">
+        <img src="https://loremflickr.com/300/400?random=6">
+        <img src="https://loremflickr.com/300/400?random=7">
+        <img src="https://loremflickr.com/300/400?random=8">
+        <img src="https://loremflickr.com/300/400?random=9">
+        <img src="https://loremflickr.com/300/400?random=10">
+    </div>
+
+    <style>
+        #card_wrap{
+            display: flex;
+            flex-wrap:wrap;
+            width: 400px;
+            box-sizing: border-box;
+            /* column-gap: 10px; */
+            row-gap: 9px;
+        }
+        .card{
+            width:33.33%;
+            display:flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .card:nth-child(1), .card:nth-child(4){
+            padding-right: 6px;
+        }
+        .card:nth-child(3), .card:nth-child(6){
+            padding-left: 6px;
+        }
+        .card .card_img{
+            width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .card .card_img img{
+            width: 100%;
+            display: block;
+        }
+        .card_text{
+            margin: 0;
+            padding-top: 5px;
+            -webkit-line-clamp:2; /* 화면에 표시 할 라인 수 */
+            overflow: hidden;   /* overflow - 지정된 크기보다 큰 영역 또는 텍스트, 이미지를 화면에 어떻게 표시할 것인지 설정 */
+            height: 42px;
+            text-overflow: ellipsis;
+            display:-webkit-box;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+    <div id="card_wrap">
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/120?random=1" alt="">
+            </div>
+            <p class="card_text">핝굮읹맍 읽읉 숣 있닯늕 덻 맍늕짋 몳륿겠얿욟</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/120?random=2" alt="">
+            </div>
+            <p class="card_text">핝굮읹맍 읽읉 숣 있닯멵 젛맕 잷밌넯욟</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/120?random=3" alt="">
+            </div>
+            <p class="card_text">욃굮읹읁 읽읉 숣 없닯늕 덻 왧 잁깗욟</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/120?random=4" alt="">
+            </div>
+            <p class="card_text">욃굮읹돏 핝굮얿릁 밻욵닯멵 읽읉 숣 있읉깗욟</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/120?random=5" alt="">
+            </div>
+            <p class="card_text">앏닓멵 읽짋 몼핥 겄 갍낣욟</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/120?random=6" alt="">
+            </div>
+            <p class="card_text">젋늕 읽짋 몼핝닯곫 샣갂핿욟</p>
+        </div>
+    </div>
+
+</body>
+</html>
