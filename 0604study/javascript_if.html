@@ -1,0 +1,161 @@
+<!-- javascript_if.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 자바스크립트 조건문 - 조건에 따라 실행되는 코드를 실행시키는 제어문이다.
+        //조건문 - if ~ else, switch문
+        // if문은 조건식이 참이냐 거짓이냐에 따라 코드를 실행
+        // switch문은 선택문 입력한 값에 맞는 코드를 선택하여 실행
+
+        // if문 기본 구조
+        // if(조건식) { 참일 경우 실행할 내용 }
+        // if(조건식) { 참일 경우 실행할 내용 }
+        //    else { 거짓일 경우 실행할 내용 }
+
+        // if(조건식) { 참 내용 }
+        // else{    if(조건식){ 참 내용 } else{ 거짓 내용 }}
+
+        // if(조건식) { 참 내용 }
+        // else if(조건식) { 참 내용 }
+        // else { 거짓 내용 }
+
+        // if ( 10 > 5 ) {   // 조건식이 참일 경우에 중괄호가 실행된다.
+        //     alert("5보다 크다");
+        //     alert("두 번재 코드");
+        //     alert("세 번재 코드");
+
+        // }
+
+        // addr = "부산광역시";
+
+        // if ( addr === "대전광역시") {
+        //     document.write("구를 선택하세요.");
+        //     document.write("대덕구, 동구, 중구, 서구, 유성구");
+        // }
+        // else {  // 조건식이 거짓일 경우에만 else 실행
+        //     document.write("올바르지 않은 지역 선택입니다.");
+        //     document.write("다시 선택하세요");
+        // }
+
+        // // 바이킹 키가 140 이상 탑승 가능
+
+        // tall = 136;
+        // if(tall >= 140) {
+        //     document.write("바이킹 탑승 가능");
+
+        // }
+        // else {
+        //     document.write("바이킹 탑승 불가");
+        // }
+        // // if문 작성할 때 참과 거짓에 실행할 코드가 하나라면 중괄호 생략 가능
+        // // 실행할 코드가 2개 이상이라면 반드시 중괄호로 묶어야 한다.
+        // // result = (tall >= 140) ? "탑승가능" : "탑승불가능";
+        // // document.writhe(result);
+
+
+        // result = "";    // 변수의 초기화
+        // 요금 = 0; // 변수의 초기화
+        // // 변수는 코드의 상단에 모두 초기화 생성하여 사용하는게 좋다.
+
+        // tall = 125;
+        // if(tall >= 140){
+        //     result = "탑승가능";
+        //     요금 = 1200;
+        // }
+        // else {
+        //     result = "탑승불가";
+        //     요금 = 0;
+        // }
+        // document.write(result + " , " + 요금);
+
+        // document.write('<hr>');
+
+        // 두 정수를 입력받아서 두 정수 중 작은 수 출력
+        // 두 정수가 같은 숫자라면 같다라고 출력
+
+        // num1 = Number(prompt("첫 번째 숫자를 입력하세요"));
+        // num2 = Number(prompt("두 번재 숫자를 입력하세요"));
+
+
+        // if (num1 > num2) {
+        //     small = num2;
+        // }
+        // else {
+        //     if(num1 == num2)
+        //         document.write("같다");
+        //     else
+        //        small = num1;
+        // }
+
+
+        // alert("두 정수 중 작은 수는: " + small + " 입니다.");
+        // document.write("두 정수 중 작은 수는 : " + small + " 입니다.");
+            
+        // document.write('<hr>');
+
+        // coin = Math.floor(Math.random() * 2) + 1;
+
+        // user = Number(prompt("1. 앞면 2. 뒷면  동전 앞면 뒷면 선택하세요"));
+        // if(coin === user) {
+        //     document.write("정답 ! ");
+        // }
+        // else {
+        //     document.write("땡!");
+        // }
+
+        // 문제.
+        // 가위바위보 컴퓨터랑 대결하기
+        // 가위 - 1, 바위 - 2, 보 - 3
+        // 컴퓨터는 랜덤값, 나는 직접 입력(prompt)
+        // 내가 승, 패, 비김(나와 컴퓨터의 값이 같으면)
+
+
+        // user = Number(prompt("값을 입력하세요."));
+        // com = Math.floor(Math.random() * 3) + 1;
+
+        // 가위 = 1;
+        // 바위 = 2;
+        // 보 = 3;
+
+        // if(user === com){
+        //     document.write("비겼습니다.");
+
+        // }else if(user == 1 && com == 3 || user == 2 && com == 1 || user == 3 && com == 2) {
+        //     document.write("사용자가 이겼습니다.");
+        // }else{
+        //     document.write("나의 패배.......");
+        // }
+        /*
+
+        세 개의 점수를 입력받아서 가장 큰 수를 출력하세요.
+        단, 같은 숫자 입력은 하지 말고요.
+
+
+
+        */
+
+        
+        function start(){
+            // alert("로그인을 완료했습니다.");
+            // document.write("로그아웃");
+            document.getElementById('출력위치').innerText = "내가 넣고 싶은 글씨 아무거나 쓰면 되요";
+        }
+
+    
+    </script>
+</head>
+<body>
+    
+    <!-- onclick= "start()"는 버튼 태그를 클릭하면 자바스크립트에서 start라는 이름의 함수를 실행해라 라는 뜻!!! -->
+    <button onclick="start()">로그인</button>
+    <h1 id="출력위치"></h1>
+
+
+</body>
+</html>

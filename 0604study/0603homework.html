@@ -1,0 +1,49 @@
+<!-- javascript.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 과제 1. 
+        // 소주 1잔에 수명이 2분 단축된다.
+        // 어떤 사람이 20년 동안 소주를 마셨다. 7300일*24*60
+        // 하루에 몇 잔씩 마시는지 입력 받기(prompt로)
+        // 이 사람의 수명은 총 몇 분 단축되었는가?
+        //                총 몇 시간 단축되었는가.
+        //               총 몇 일 단축되었는가.
+        //      모든 값은 정수만 출력
+
+        
+        소주 = -2;
+        하루 = Number(prompt("하루에 내가 마신 소주의 잔 : "));
+        
+        minusminute = 소주 * 하루 * 7300;
+        
+        minushour = Math.floor(minusminute / 60);
+        minusday = Math.floor(minushour / 24);
+
+        document.write("총 단축된 수명<br>");
+        document.write("몇 분 단축되었는가? : " + minusminute + " 분<br>");
+        document.write("몇 시간 단축되었는가? : " + minushour + " 시간<br>");
+        document.write("몇 일 단축되었는가? : " + minusday + " 일<br>");
+
+
+        // 과제 2.
+        // 두 개의 주사위를 던쳐서 같은 값이 나온다면 당첨, 아니라면 꽝 출력.
+
+        firstDice = Math.floor(Math.random()*10) - 3;
+        secondDice = Math.floor(Math.random()*10) - 3;
+
+        result = (firstDice == secondDice) ? `당첨( ${firstDice} , ${secondDice} )` : `꽝( ${firstDice} , ${secondDice} )`;
+
+        document.write("<br><hr> 결과 : " + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

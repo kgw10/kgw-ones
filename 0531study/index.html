@@ -148,6 +148,30 @@
 
 
             상수 명 -> 모두 대문자
+                <script>.
+        minutes = Number(prompt("주차 시간을 분 단위로 입력하세요:"));
+        fee = 0;
+        additionalMinutes = 0;
+        extraFee = 0;
+        fee = (minutes < 30) ? 1000 : fee;
+        fee = (minutes >= 30 && minutes < 120) ? 1000 : fee;
+        fee = (minutes >= 120 && minutes < 240) ? 1700 : fee;
+        fee = (minutes >= 240) ? 2700 : fee;
+
+        additionalMinutes = (minutes >= 30 && minutes < 120) ? (minutes - 30) : additionalMinutes;
+        additionalMinutes = (minutes >= 120 && minutes < 240) ? (minutes - 120) : additionalMinutes;
+        additionalMinutes = (minutes >= 240) ? (minutes - 240) : additionalMinutes;
+
+        extraFee = Math.ceil(additionalMinutes / 10) * 100;
+        fee = fee + extraFee;
+        document.write("<h1>주차비 계산 결과</h1>");
+        document.write("주차 시간: " + minutes + " 분<br>");
+        document.write("주차비: " + fee + " 원<br>");
+                지난시간 = (minutes > 30, minutes < 120) ? (minutes - 30) : 지난시간;
+        지난시간 = (minutes >= 120 && minutes < 240) ? (minutes - 120) : 지난시간;
+        지난시간 = (minutes >= 240) ? (minutes - 240) : 지난시간;
+
+        document.write("주차비 : " + 기본요금+ " 원");
                     */
 
 
