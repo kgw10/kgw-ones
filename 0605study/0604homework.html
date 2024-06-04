@@ -12,6 +12,19 @@
         // 세 개의 정수를 입력받아서 가장 큰 수를 출력하세요.
         // 단, 같은 숫자 입력은 하지 말고요.
 
+        num1 = Number(prompt("첫 번째 정수를 입력하세요."));
+        num2 = Number(prompt("두 번째 정수를 입력하세요."));
+        num3 = Number(prompt("세 번째 정수를 입력하세요."));
+
+        if (num1 > num2 && num1 > num3) {
+            doucment.write("가장 큰 수 : " + num1);
+        } else if (num2 > num1 && num2 > num3) {
+            doucment.write("가장 큰 수 : " + num2);
+        } else {
+            doucment.write("가장 큰 수 : " + num3);
+        }
+
+
 
         // 2. 주사위 게임 컴퓨터와 함께
         // - 컴퓨터와 내가 각각 주사위 2개씩 던진다.
