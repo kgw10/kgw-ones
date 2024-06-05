@@ -11,19 +11,23 @@
 
         // 세 개의 정수를 입력받아서 가장 큰 수를 출력하세요.
         // 단, 같은 숫자 입력은 하지 말고요.
+        // num1 = Number(prompt("첫 번째 정수를 입력하세요."));
+        // num2 = Number(prompt("두 번째 정수를 입력하세요."));
+        // num3 = Number(prompt("세 번째 정수를 입력하세요."));
 
-        num1 = Number(prompt("첫 번째 정수를 입력하세요."));
-        num2 = Number(prompt("두 번째 정수를 입력하세요."));
-        num3 = Number(prompt("세 번째 정수를 입력하세요."));
+        // if (num1 == num2 && num2 == num3 && num3 == num1) {
+        //     document.write("서로 다른 값을 입력하세요.");
+        // } else {
+        //     if (num1 > num2 && num1 > num3) {
+        //         document.write("가장 큰 수 : " + num1);
+        //     } else if (num2 > num1 && num2 > num3) {
+        //         document.write("가장 큰 수 : " + num2);
+        //     } else {
+        //         document.write("가장 큰 수 : " + num3);
+        //     }
+        // }
 
-        if (num1 > num2 && num1 > num3) {
-            doucment.write("가장 큰 수 : " + num1);
-        } else if (num2 > num1 && num2 > num3) {
-            doucment.write("가장 큰 수 : " + num2);
-        } else {
-            doucment.write("가장 큰 수 : " + num3);
-        }
-
+        
 
 
         // 2. 주사위 게임 컴퓨터와 함께
@@ -32,6 +36,42 @@
         // - 단, 주사위가 같은 값이면 이긴다.
         // 예) 컴 : 1, 5    나 : 2, 3   -> 나의 패배(합이 작으니까)
         //     컴 : 5, 6    나 : 1, 1   -> 나의 승리(같은 값이 나왔으니까.)
+
+        // BigDice1 = Math.floor(Math.random()*6) + 1;
+        // BigDice2 = Math.floor(Math.random()*6) + 1;
+        // BigDice3 = Math.floor(Math.random()*6) + 1;
+        // BigDice4 = Math.floor(Math.random()*6) + 1;
+        
+        // comDice1 = BigDice;
+        // comDice2 = BigDice;
+        // userDice1 = BigDice;
+        // userDice2 = BigDice;
+        
+        comDice1 = Math.floor(Math.random()*6) + 1;
+        comDice2 = Math.floor(Math.random()*6) + 1;
+        userDice1 = Math.floor(Math.random()*6) + 1;
+        userDice2 = Math.floor(Math.random()*6) + 1;
+
+        comDice = comDice1 + comDice2;
+        userDice = userDice1 + userDice2;
+
+        //result = (userDice > comDice) ? `나의 승리!( ${userDice1} , ${userDice2} )` : `나의 패배....( ${comDice1} , ${comDice2} )`;
+
+        //document.write("<br><hr> 결과 : " + result);
+        document.write(`나의 주사위( ${userDice1} , ${userDice2} )` + " , " + `컴퓨터의 주사위( ${comDice1} , ${comDice2} )`);
+
+        if (userDice1 == userDice2) {
+            document.write("<br>나의 승리!(같은 값)");
+        } else if (comDice1 == comDice2) {
+            document.write("<br>나의 패배.....(같은 값)");
+        } else if (userDice > comDice) {
+            document.write("<br>나의 승리!");
+        } else if (userDice < comDice) {
+            document.write("<br>나의 패배.....");
+        } else {
+            document.write("<br>무승부!");
+        }
+
     </script>
 </head>
 <body>
