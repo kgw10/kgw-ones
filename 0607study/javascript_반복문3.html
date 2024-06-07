@@ -1,0 +1,81 @@
+<!--  javascript_반복문.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 문제 1
+        //1부터 100까지 숫자를 출력하세요.
+        // 숫자 중에서 3의 배수에 해당하는 숫자 대신 '3배'라고 출력
+        //            8의 배수에 해당하는 숫자 대신 '8배'라고 출력
+        //            3과 8의 공동의 배수 숫자 대신 '3, 8배'라고 출력
+        //
+
+        // for ( var i = 1; i <= 100; i++) {
+        //     if ( i % 3 && i % 8) {
+        //         document.write("<br>3, 8배");
+        //     } else if ( i % 8){
+        //         document.write("<br>8배");
+        //     } else if (i % 3) {
+        //         document.write("<br>3배");
+        //     }
+        // }
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i % 3 == 0 && i % 8 == 0) {
+        //         document.write("<br>3, 8배");
+        //     } else if (i % 3 == 0) {
+        //         document.write("<br>3배");
+        //     } else if (i % 8 == 0) {
+        //         document.write("<br>8배");
+        //     } else {
+        //         document.write("<br>" + i);
+        //     }
+        // }
+        
+
+        // 문제 2
+        // 네개 숫자로 이루어진 비밀번호 찾기
+        // 각각의 숫자는 1~9 중 하나이다.
+        // 네개의 숫자는 서로 중복이 없다.
+        // 첫 번째 숫자는 네 번째 숫자보다 2 더 크다.
+        // 두 번째 숫자는 세 번째 숫자보다 작다.
+        // 네 개의 비밀번호 숫자와 비밀번호 숫자 역순의 합은 16456이다.
+        // 예) 비밀번호가 1234라면 1234 + 4321
+
+
+
+        for ( var num1 = 1; num1 <= 9; num1++ ) {
+            for (var num2 = 1; num2 <= 9; num2++) {
+                for (var num3 = 1; num2 <= 9; num3++) {
+                    for (var num4 = 1; num4 <= 9; num4++) {
+                        if (num1 !== num2 && num1 !== num3 && num1 !== num4 && num2 !== num3 && num2 !== num4 && num3 !== num4) {
+                            if (num1 === num4 + 2) {
+                                if (num2 < num3) {
+                                    var relnumber = num1 * 1000 + num2 * 100 + num3 * 10 + num4;
+                                    var nonumber = num4 * 1000 + num3 * 100 + num2 * 10 + num1;
+
+                                    if (relnumber + nonumber === 16456) {
+                                        document.write("비밀번호는 : " + relnumber);
+                                        document.write("<br>역순 비밀번호는 : " + nonumber);
+                                        document.write("<br>둘이 더한 값은? : " + (relnumber + nonumber));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

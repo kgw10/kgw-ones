@@ -1,4 +1,5 @@
 <!-- 0605homework.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +8,19 @@
     <title>Document</title>
     <script>
         
-        user = Number(prompt("up&down 숫자 맞추기 : "));
-        while( true ){
-            com = Math.floor(Math.random() * 50) + 1;
-            if(user == com){
-                document.write("<br> 정답");
-                break; // while문 종료
-            }else if( user > com){  // 컴퓨터의 숫자보다 크게 입력한 경우
-                alert("DOWN");
-            }else if( user < com ){ // 컴퓨터의 숫자보다 작게 입력한 경우
-                alert("UP");
-            }
+        // user = Number(prompt("up&down 숫자 맞추기 : "));
+        // while( true ){
+        //     com = Math.floor(Math.random() * 50) + 1;
+        //     if(user == com){
+        //         document.write("<br> 정답");
+        //         break; // while문 종료
+        //     }else if( user > com){  // 컴퓨터의 숫자보다 크게 입력한 경우
+        //         alert("DOWN");
+        //     }else if( user < com ){ // 컴퓨터의 숫자보다 작게 입력한 경우
+        //         alert("UP");
+        //     }
  
-        }
+        // }
 
 
         // 과제
@@ -28,18 +29,74 @@
             내가 입력한 숫자를 컴퓨터가 random() 함수를 통해 맞춰야 한다. UP, DOWN을 통해 범위를 좁혀가며 맞출 수 있도록 해야 한다.*/
 
 
-        var com = Math.floor(Math.random()*50) + 1;
-        var user = Number(prompt("1에서 50 사이의 숫자를 선택하세요."));
+
+        // var user = Number(prompt("1에서 50 사이의 숫자를 선택하세요."));
+        // while (true) {
+        //     var com = Math.floor(Math.random()*50) + 1;
+
+        //     if (com === user) {
+        //         document.write("<br>컴퓨터가 맞췄습니다.");
+        //         break;
+        //     } else if (com < user) {
+        //         document.write("<br>UP");
+        //     } else {
+        //         document.write("<br>DOWN");
+        //     }
+        // }
+
+        
+        let user = 0;
 
 
-        while (true) {
-            if (com == user) {
-                document.write("컴퓨터가 맞췄습니다.");
-                break;
-            } else if (com < user) {
-                document.write("UP");
-            } else {
-                document.write("DOWN");
+        while( !(1<= user && user <= 50) ) {    // 무한 루프(몇 번 반복하는지 모르는 반복문은 무한 루프다.)
+            user = Number(prompt("1~50 중 하나를 입력하세요."));            
+        }        
+        
+        var min = 1; // 랜덤범위의 최소값
+        var max = 50; // 랜덤범위의 최대값
+        var nul = 50; // 랜덤함수 최대값 - 최소값 + 1
+        while(true) {
+            com = Math.floor(Math.random * 50) + 1; // *nu11) +1 - 1~50
+
+            if (com === user) {
+                document.write("정답! com : " + com + "      user : " + user);
+                break;  // while문 반복 종료
+            }
+
+            else if (com < user) { // 내가 입력한 값보다 컴퓨터의 값이 작다면 
+                document.write(`UP! (com : ${com})<br>`);
+                min = com + 1;  // 랜덤범위의 최소값 - 결과가 업이므로 컴퓨터값보다 +1이 최소값
+                nul = max-min+1;    //랜덤범위의 최대값 변화 없음 - 최소값이 변경되었으므로 * 값변경
+            }
+            else if (com > user) {  // 내가 입력한 값보다 컴퓨터의 값이 크다면
+                document.write(`DOWN! (com : ${com})<br>`);
+                max = com-1;    // 랜덤범위의 최대값 - 다운이므로 최대값만 변경
+                nul = max-min+1;    // 랜덤범위가 변경 되었으므로 *의 값도 변경
+            }
+            
+        }
+
+
+        for (var num1 = 1; num1 <= 9; num1++) {
+            for (var num2 = 1; num2 <= 9; num2++) {
+                for (var num3 = 1; num3 <= 9; num3++) {
+                    for (var num4 = 1; num4 <= 9; num4++) {
+                        if (num1 !== num2 && num1 !== num3 && num1 !== num4 && num2 !== num3 && num2 !== num4 && num3 !== num4) {
+                            if (num1 === num4 + 2) {
+                                if (num2 < num3) {
+                                    var relnumber = num1 * 1000 + num2 * 100 + num3 * 10 + num4;
+                                    var nonumber = num4 * 1000 + num3 * 100 + num2 * 10 + num1;
+
+                                    if (relnumber + nonumber === 16456) {
+                                        document.write("비밀번호는: " + relnumber);
+                                        document.write("<br>역순 비밀번호는: " + nonumber);
+                                        document.write("<br>둘이 더한 값은: " + (relnumber + nonumber));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
