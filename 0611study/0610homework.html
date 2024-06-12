@@ -20,7 +20,7 @@
                     break;
                 case '*':   결과 = n1 * n2;
                     break;
-                case ' /':  결과 = n1 / n2;
+                case '/':  결과 = n1 / n2;
                     break;
             }
 
@@ -33,14 +33,10 @@
 </head>
 <body>
 
-    <div id="input_box">
-        <input type="text" id="num1">
-        <input type="text" id="num2">
-    </div>
 
-    <div id="getData"> </div>
-
-
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <hr>
     <button onclick="getData('+')"> 더하기</button>
     <button onclick="getData('-')">빼기</button>
     <button onclick="getData('*')">곱하기</button>
