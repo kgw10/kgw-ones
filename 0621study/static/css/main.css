@@ -1,0 +1,90 @@
+/* mian.css */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+ul{ list-style-type: none;}
+
+a{ text-decoration: none;}
+
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+#main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#header{
+    width: 100%;
+    padding: 15px 0;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav .menuList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#nav .menu{
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid transparent;
+}
+#nav .menu:hover{
+    animation: spark 1s infinite alternate;
+
+}
+
+#nav .member{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav .member a{
+    width: 40%;
+    text-align: center;
+    font-size: 23px;
+    padding: 15px 0;
+}
+
+.member a:first-child{
+    background-color: rgb(41, 41, 255);
+    color: #fff;
+}
+
+.member a:last-child{
+    background-color: #ff2020;
+    color: #fff;
+}
+
+@keyframes spark {
+    0%{
+        border-color: #ff2020;
+    }
+    25%{
+        border-color: dodgerblue;
+    }
+    50%{
+        border-color: rgb(252, 39, 39);
+    }
+    100%{
+        border-color: rgb(41, 41, 255);
+    }
+}
