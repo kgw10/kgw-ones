@@ -34,6 +34,8 @@ boardInit = function(){
 start = function(){
     stateInit();
     imgLocation();
+    $(".item").on("click", imgClick);
+    timeStart(); // 게임 진행 시간 시작!!
 }
 
 
@@ -63,15 +65,25 @@ imgLocation = function(){
     console.log(imgPlace);
     imgPlace = shuffle();  // imgPlace에 저장된 값을 섞어주기 위한 함수 실행
     console.log(imgPlace)
+
+    $(".item>img").eack(function(i){
+        $(this).find("img").attr("src","./static/image/" + imgName[imgPlace[i]]);
+        $(this).find("img").removeClass("hide");
+    });
 }
 
+setTimeout(function(){
+    $(".item>img").addClass("hide");
+}, 1000);
+
 function shuffle(){
-    for(var i = imgPlace.length - 1; i > 0; i++){
+    for(var i = imgPlace.length - 1; i > 0; i--){
         var i = Math.floor(Math.random() * (i + 1));
         var t = imgPlace[i];
         imgPlace[i] = imgPlace[i];
         imgPlace[i] = t;
 
     }
+    return imgPlace;
 
 }
