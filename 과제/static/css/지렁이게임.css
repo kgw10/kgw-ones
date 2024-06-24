@@ -1,0 +1,19 @@
+#wrap table {
+    border-collapse: collapse;
+}
+#wrap table tr td {
+    width: 30px; height: 30px;
+    border: 1px solid black;
+}
+.wall {
+    background: black;
+}
+.me {
+    background: red;
+}
+.blank {
+    background-color: white;
+}
+.food {
+    background-color: green;
+}
