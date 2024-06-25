@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부동산</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./static/javascript/main.js"></script>
+    <link rel="stylesheet" href="./static/css/main.css">
+</head>
+<body>
+    <div id="header">    
+        <h2>세상의 모든 부동산 - 세모부</h2>
+        <div id="wrap">
+            <div id="menuList">
+                <button class="menu">거래방식</button>
+                <button class="menu">가격대</button>
+                <button class="menu">면적</button>
+                <button class="menu">방/욕실수</button>
+                <input type="text" id="search" placeholder="검색">
+                <button class="menu">상담</button>
+            </div>
+        </div>
+        <div id="building">
+            <div class="build" onclick="goToDetail('property1')"><img src="static/image/아파트2.png" alt="">아파트 전세 1억 2,000</div>
+            <div class="build" onclick="goToDetail('property2')"><img src="static/image/주택.png" alt="">주택 전세 2억 2,000</div>
+            <div class="build" onclick="goToDetail('property3')"><img src="static/image/오피스텔.png" alt="">오피스텔 월세 1,000/50</div>
+            <div class="build" onclick="goToDetail('property4')"><img src="static/image/아파트4.png" alt="">아파트 전세 2억 2,000</div>
+            <div class="build" onclick="goToDetail('property5')"><img src="static/image/아파트3.png" alt="">아파트 매매 30억 2,000</div>
+            <div class="build" onclick="goToDetail('property6')"><img src="static/image/아파트6.png" alt="">아파트 전세 1억 2,500</div>
+            <div class="build" onclick="goToDetail('property7')"><img src="static/image/아파트7.png" alt="">아파트 전세 2억 6,000</div>
+            <div class="build" onclick="goToDetail('property8')"><img src="static/image/오피스텔2.png" alt="">오피스텔 월세 2000/45</div>
+        </div>
+    </div>
+</body>
+</html>
