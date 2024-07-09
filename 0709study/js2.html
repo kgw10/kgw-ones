@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- jquery CDN-->
+     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>   
+</head>
+<body>
+
+    <!-- 첫 번째 칸에 여행지가 선택되면 그 다음 칸에 두 번째로 선택한 여행지가 들어간다. 그리고 세 번째 칸에는 세 번째로 선택한 여행지가 들어가고 세 칸에 들어간 여행지를 다시금
+     클릭한다면 사라지고 빈 공간이 된다. 그때 다른 여행지를 하나 선택한다면 빈공간이 된 칸에 여행지가 선택되어 들어간다. -->
+
+    <style>
+        #select1, #select2, #select3{
+            position: absolute; width: 200px; height: 100px; line-height: 100px;
+            font-size: 30px; left: 300px; border: 2px solid #aaa;
+        }
+        #select1{ top : 20px; } #select2{ top:140px; } #select3{ top : 260px; }
+        ul li{cursor: pointer; margin-bottom: 10px;}
+
+
+    </style>
+    <!-- 첫 번째 칸 제주도, 두 번째 칸 부산, 세 번째 칸 목포 -->
+    <div id="travel">
+        <h3>여행지 선택</h3>
+        <ul>
+            <li class="area">서울</li> <li class="area">대구</li> <li class="area">제주도</li>
+            <li class="area">대전</li> <li class="area">부산</li> <li class="area">양평</li>
+            <li class="area">강릉</li> <li class="area">목포</li> <li class="area">예수</li>
+            <li class="area">통영</li><li class="area">화천</li> <li class="area">경주</li>
+        </ul>
+    </div>
+
+
+    <div id="select1" class="select"></div>
+    <div id="select2" class="select"></div>
+    <div id="select3" class="select"></div>
+    
+    <script>
+        $(".area").click(function(){
+            var item = $(this).text();
+            if($("#select1").text() == '') {
+                $("#select1").text(item);
+            } else if ($("#select2").text() == '') {
+                $("#select2").text(item);
+            } else if ($("#select3").text() == '') {
+                $("#select3").text(item); 
+            }
+        });
+
+        $(".select").click(function(){
+            $(this).text('');
+        })
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- jquery CDN-->
+     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>   
+</head>
+<body>
+    
+    <div id="box1">나div</div>
+    <p class="a">나 p</p>
+    <span class="a">나 span</span>
+    <b id="text1">나 b</b>
+
+
+    <style>
+        #selectMenu{
+            position: relative;
+            top: -200px;
+            left: 250px;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #aaa; 
+            border-radius: 7px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+    <div id="lunch">
+        <h3>점심 메뉴를 고르세요</h3>
+        <ol>
+            <li class="menu">짬뽕</li>
+            <li class="menu">곰탕</li>
+            <li class="menu">콩나물국밥</li>
+            <li class="menu">돈가스</li>
+            <li class="menu">쭈꾸미철판볶음</li>
+            <li class="menu">잔치국수</li>
+        </ol>
+    </div>
+    <div id="selectMenu"></div>
+
+    <script>
+
+        $(".menu").on("click", selectMenu);
+
+        function selectMenu(){
+            var menu = $(this).text();
+            $("#selectMenu").text(menu);
+        }
+
+        // id가 text1인 태그를 클릭하면 해당 태그 안에 있는 글자 색을 빨강으로 변경해라.
+
+        $("#text1").on("click", function(){
+            $(this).css("color", "red");
+        });
+
+        // span 태그를 클릭하면 id가 box1인 태그 안에 h2 태그를 만들고 h2 태그 안에 비야 그만와!
+
+        $(".a").eq(1).on("click", function(){
+            $("#box1").append("<h2>비야 그만와!</h2>");
+            $(this).hide(); // hide는 태그에 display:none; 처리, .show()는 태그의 display를 원래값으로 돌려 놓기
+
+        });
+        // id가 box1인 태그를 클릭하면 span태그를 보이게 하고 box1태그 안에 비우기
+        $("#box1").on("click", function(){
+            $(".a").eq(1).show();
+            $(this).find("h2").remove();
+        });
+
+
+
+        $(".a").eq(0).on("click", event1)
+
+        function event1(){
+            // 클릭하면 무엇을 할 것인가?
+            // p태그를 클릭해서 b태그 밑에 div태그를 만들고 div 태그 안에 로또 1등 되면 좋겠다. 라고 출력한다.
+            $("body").append( "<div>로또 1등이라도 당첨되면 기분 째질 텐데.....</div>");
+
+
+        }
+        
+        // 자바스크립트에서 함수는 이름 있는 함수와 이름 없는 익명 함수가 있다. 이름 없는 함수로는 function(){}
+        // $(".a").eq(0).on("click", 이벤트 발생시 실행할 코드)   on() - 첫 번째 인덱스를 실행하겠다.(jquery에서 on()을 사용하는 게 실용적이다.)
+
+        // name 태그로 할 경우 $("input[name=a]")의 형식으로 만들어진다.
+        // $(".a").eq(0).click(function(){alert("p태그야"); });    // .eq[] - 인덱스 지정
+
+        // document.getElementsByClassName("a")[0].addEventListener("click", function(){
+        //     alert("와우"); 
+        // });
+    </script>
+
+
+</body>
+</html>
+
+<!-- 
+    브라우저에서 이벤트란 브라우저 내에서 일어나는 모든 행위를 뜻한다.(브라우저에서 사용자가 하는 모든 행위)
+
+    브라우저에 발생하는 모든 이벤트는 자바스크립트(밖에)로 처리해야 한다.
+
+    Id - 단일
+    Class, Name, Tag - 다중(배열)
+    document.getElementById()/addEventListener()
+    document.getElementByClassName()
+    document.getElementByTagName()
+    document.getElementByName()
+    
+
+-->
