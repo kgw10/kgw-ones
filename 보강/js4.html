@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- jquery CDN-->
+     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>      
+</head>
+<body>
+<!-- 켜기 버튼을 눌렀을 때 '온도 10' 나타내기, '온도 10'이 화면에 나와 있을 때 증가와 감소하기, 증가 클릭하면 온도 최대 35까지 감소 크릭하면 최소 1까지 끄기를 눌렀을 때는 변화 없이-->
+    <button id="on">켜기</button> <button id="off">끄기</button>
+    <button id="up">증가</button> <button id="down">감소</button>
+    <div id="lcd" style="display: none;">
+        <p> 온도 <b id="temp">10</b> </p>
+    </div>
+
+
+    <script>
+        var minTemp = 1;
+        var maxTemp = 35;
+
+        $("#on").click(function() {
+            $("#lcd").show();
+            $("#temp").text("10");
+        });
+
+        $("#off").click(function() {
+            $("#lcd").hide();
+        });
+
+        $("#up").click(function() {
+            var Temp = parseInt($("#temp").text());
+            if (Temp < maxTemp) {
+                $("#temp").text(Temp + 1);
+            }
+        });
+
+        $("#down").click(function() {
+            var Temp = parseInt($("#temp").text());
+            if (Temp > minTemp) {
+                $("#temp").text(Temp - 1);
+            }
+        });
+    </script>
+
+    
+</body>
+</html>
